@@ -414,12 +414,10 @@ class LanguageManager {
     }
 
     async init() {
-        // Загружаем переводы для текущего языка
         await this.loadTranslations(this.currentLang);
         this.updateLanguageSwitch();
         this.translatePage();
 
-        // Обработчики для переключения языка
         document.querySelectorAll('.lang-switch a').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -431,8 +429,11 @@ class LanguageManager {
 
     async loadTranslations(lang) {
         try {
-            const module = await import(`./translations/${lang}.js`);
-            this.translations = module.translations;
+            const response = await fetch(`/js/translations/${lang}.js`);
+            const text = await response.text();
+            // Извлекаем объект переводов из текста модуля
+            const moduleText = text.replace('export const translations = ', '');
+            this.translations = JSON.parse(moduleText);
         } catch (error) {
             console.error(`Failed to load translations for ${lang}:`, error);
         }
@@ -785,6 +786,52 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initLangSwitcher();
     initHeroParallax();
+
+    // Инициализация кастомного курсора
+    const cursor = document.querySelector('.cursor');
+    const cursorFollower = document.querySelector('.cursor-follower');
+
+    if (cursor && cursorFollower) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 50);
+        });
+
+        // Эффект при наведении на кнопки и ссылки
+        document.querySelectorAll('a, button').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(1.5)';
+                cursorFollower.style.transform = 'scale(1.5)';
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursorFollower.style.transform = 'scale(1)';
+            });
+        });
+    }
+    
+    // Магнитный эффект для кнопок
+    document.querySelectorAll('.magnetic').forEach(button => {
+        if (button) {
+            button.addEventListener('mousemove', (e) => {
+                const rect = button.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                
+                button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+            });
+            
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = '';
+            });
+        }
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -923,11 +970,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
 
     function showTestimonial(index) {
+        if (!testimonialItems.length) return;
+
         testimonialItems.forEach(item => {
             item.classList.remove('active');
         });
         
-        document.querySelectorAll('.dot').forEach(dot => {
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach(dot => {
             dot.classList.remove('active');
         });
 
@@ -939,37 +989,45 @@ document.addEventListener('DOMContentLoaded', function() {
             currentIndex = index;
         }
 
-        testimonialItems[currentIndex].classList.add('active');
-        document.querySelector(`.dot[data-index="${currentIndex}"]`).classList.add('active');
+        if (testimonialItems[currentIndex]) {
+            testimonialItems[currentIndex].classList.add('active');
+            const activeDot = document.querySelector(`.dot[data-index="${currentIndex}"]`);
+            if (activeDot) {
+                activeDot.classList.add('active');
+            }
+        }
+    }
+
+    if (prevButton && nextButton) {
+        prevButton.addEventListener('click', () => {
+            showTestimonial(currentIndex - 1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            showTestimonial(currentIndex + 1);
+        });
     }
 
     // Создаем точки для навигации
-    testimonialItems.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        dot.setAttribute('data-index', index);
-        if (index === 0) dot.classList.add('active');
-        
-        dot.addEventListener('click', () => {
-            showTestimonial(index);
+    if (testimonialItems.length && dotsContainer) {
+        testimonialItems.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            dot.setAttribute('data-index', index);
+            if (index === 0) dot.classList.add('active');
+            
+            dot.addEventListener('click', () => {
+                showTestimonial(index);
+            });
+            
+            dotsContainer.appendChild(dot);
         });
-        
-        dotsContainer.appendChild(dot);
-    });
 
-    // Обработчики для кнопок навигации
-    prevButton.addEventListener('click', () => {
-        showTestimonial(currentIndex - 1);
-    });
-
-    nextButton.addEventListener('click', () => {
-        showTestimonial(currentIndex + 1);
-    });
-
-    // Автоматическое переключение слайдов
-    setInterval(() => {
-        showTestimonial(currentIndex + 1);
-    }, 5000);
+        // Автоматическое переключение слайдов
+        setInterval(() => {
+            showTestimonial(currentIndex + 1);
+        }, 5000);
+    }
 
     // Обработка отправки формы
     const contactForm = document.getElementById('contactForm');
@@ -1053,4 +1111,106 @@ document.addEventListener('DOMContentLoaded', function() {
         vacancyModal.style.display = 'none';
         alert('Дякуємо за відгук! Ми зв\'яжемося з вами найближчим часом.');
     });
+});
+
+// Обработка модального окна вакансии
+document.addEventListener('DOMContentLoaded', function() {
+    const vacancyBtns = document.querySelectorAll('.vacancy-btn');
+    const vacancyModal = document.querySelector('.vacancy-modal');
+    const closeBtn = document.querySelector('.vacancy-modal-close');
+    const vacancyForm = document.getElementById('vacancyForm');
+
+    // Открытие модального окна
+    vacancyBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const vacancyTitle = this.closest('.vacancy-card').querySelector('h3').textContent;
+            vacancyModal.querySelector('.vacancy-modal-title').textContent = `Відгукнутися на вакансію: ${vacancyTitle}`;
+            vacancyModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Закрытие модального окна
+    closeBtn.addEventListener('click', closeModal);
+    vacancyModal.addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+
+    function closeModal() {
+        vacancyModal.classList.remove('active');
+        document.body.style.overflow = '';
+        vacancyForm.reset();
+    }
+
+    // Обработка отправки формы
+    vacancyForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Здесь будет код отправки формы на сервер
+        const formData = new FormData(this);
+        console.log('Отправка данных формы:', Object.fromEntries(formData));
+        
+        // Показываем сообщение об успешной отправке
+        alert('Ваша заявка успішно відправлена! Ми зв\'яжемося з вами найближчим часом.');
+        closeModal();
+    });
+});
+
+// Обработка отправки формы через EmailJS
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const vacancyForm = document.getElementById('vacancyForm');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Отправка формы контактов
+            const contactTemplateParams = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                message: 'Новая заявка с сайта'
+            };
+
+            emailjs.send('service_2i2scv9', 'template_itgrydc', contactTemplateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Дякуємо за заявку! Ми зв\'яжемося з вами найближчим часом.');
+                    contactForm.reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Виникла помилка при відправці. Будь ласка, спробуйте пізніше.');
+                });
+        });
+    }
+
+    if (vacancyForm) {
+        vacancyForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Отправка формы вакансии
+            const vacancyTemplateParams = {
+                from_name: document.querySelector('#vacancyForm #name').value,
+                from_email: document.querySelector('#vacancyForm #email').value,
+                phone: document.querySelector('#vacancyForm #phone').value,
+                message: document.querySelector('#vacancyForm #message').value,
+                vacancy_title: document.querySelector('.vacancy-modal-title').textContent
+            };
+
+            emailjs.send('service_2i2scv9', 'template_itgrydc', vacancyTemplateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Дякуємо за відгук! Ми зв\'яжемося з вами найближчим часом.');
+                    vacancyForm.reset();
+                    document.querySelector('.vacancy-modal').classList.remove('active');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Виникла помилка при відправці. Будь ласка, спробуйте пізніше.');
+                });
+        });
+    }
 });

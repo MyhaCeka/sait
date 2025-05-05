@@ -13,6 +13,18 @@
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+                publicKey: "SilKRnSh0H-g07TF2",
+                blockRequest: false,
+                limitRate: {
+                    throttle: 10000
+                }
+            });
+        })();
+    </script>
 </head>
 <body>
     <!-- Прелоадер -->
@@ -71,7 +83,7 @@
             <div class="hero__content">
                 <h1 class="hero__title">
                     <span class="accent-text" data-translate="hero.title">Просувайте свій бізнес з нашою рекламною стратегією</span>
-                    <span class="main-text" data-translate="hero.subtitle">Інdivідуальні рішення для підвищення впізнаваності бренду та зростання продажів</span>
+                    <span class="main-text" data-translate="hero.subtitle">Індивідуальні рішення для підвищення впізнаваності бренду та зростання продажів</span>
                 </h1>
                 <a href="#contact" class="btn btn-primary" data-translate="hero.cta">Обговорити проект</a>
             </div>
@@ -307,7 +319,7 @@
             <div class="testimonials-nav">
                 <button class="nav-prev">
                     <svg viewBox="0 0 24 24">
-                        <path d="M15.41 7.41L14 6л-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
                     </svg>
                 </button>
                 
@@ -559,13 +571,13 @@
             <div class="vacancy-contacts">
                 <div class="contact-phone">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                        <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38л2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02л-2.2 2.2z"/>
+                        <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                     <a href="tel:+380932709130">+38 (093) 270-91-30</a>
                 </div>
                 <div class="contact-phone">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                        <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38л2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02л-2.2 2.2z"/>
+                        <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                     <a href="tel:+380933447684">+38 (093) 344-76-84</a>
                 </div>
@@ -596,7 +608,7 @@
                     <div class="service-card__content">
                         <div class="service-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 3L1 9л11 6 11-6-11-6zm0 13.92л-6.5-4.45L1 14.9V19л11 6 11-6v-4.1л-4.5-2.45L12 16.92"></path>
+                                <path d="M12 3l-11 6l11 6 11-6l-11-6z"/>
                             </svg>
                         </div>
                         <h3>Брендинг</h3>
@@ -620,7 +632,7 @@
                     <div class="service-card__content">
                         <div class="service-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M14 12h1.5v2.82л2.44 1.41-.75 1.3L14 15.69V12zm-4 0h2v3H8v-3zm4-10h2v3h-2V2zM8 2h2v3H8V2zm4 20a10 10 0 0 1-10-10 10 10 0 0 1 10-10 10 10 0 0 1 10 10 10 10 0 0 1-10 10z"/>
+                                <path d="M14 12h1.5v2.82l2.44 1.41-.75 1.3L14 15.69V12zm-4 0h2v3H8v-3zm4-10h2v3h-2V2zM8 2h2v3H8V2zm4 20а10 10 0 0 1-10-10 10 10 0 0 1 10-10 10 10 0 0 1 10 10 10 10 0 0 1-10 10z"/>
                             </svg>
                         </div>
                         <h3>Стратегія</h3>
@@ -684,13 +696,13 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38л2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02л-2.2 2.2z"/>
+                                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                             </svg>
-                            <a href="tel:+380501234567">+38 (050) 123-45-67</a>
+                            <a href="tel:+38 (050) 123-45-67">+38 (050) 123-45-67</a>
                         </div>
                         <div class="contact-item">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                                <path d="M20 8л-8 5-8-5v-2л8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-1.11-.9-2-2-2z"/>
+                                <path d="M20 8l-8 5-8-5v-2l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-1.11-.9-2-2-2z"/>
                             </svg>
                             <a href="mailto:info@karina-marketing.com">info@karina-marketing.com</a>
                         </div>
@@ -763,10 +775,10 @@
     </footer>
 
     <!-- Модальное окно для отклика на вакансию -->
-    <div class="vacancy-modal" id="vacancyModal">
+    <div class="vacancy-modal">
         <div class="vacancy-modal-content">
-            <button class="vacancy-modal-close" id="modalClose">&times;</button>
-            <h2 class="vacancy-modal-title">Відгукнутися на вакансію</h2>
+            <button class="vacancy-modal-close">&times;</button>
+            <h3 class="vacancy-modal-title">Відгукнутися на вакансію</h3>
             <form class="vacancy-form" id="vacancyForm">
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder=" " required>
@@ -781,79 +793,12 @@
                     <label for="phone">Телефон</label>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                    <textarea id="message" name="message" placeholder=" " required></textarea>
                     <label for="message">Супровідний лист</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Відправити</button>
+                <button type="submit" class="btn btn-primary">Надіслати</button>
             </form>
         </div>
     </div>
-
-    <!-- Модальное окно -->
-    <div class="modal" id="successModal">
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <h2 class="modal-title">Дякуємо за заявку!</h2>
-            <p class="modal-description">Ми зв'яжемося з вами найближчим часом для обговорення деталей.</p>
-            <button class="btn btn-primary">
-                Повернутися на сайт
-                <span class="btn-hover-effect"></span>
-            </button>
-        </div>
-    </div>
-
-    <!-- Модальное окно для отклика -->
-    <div class="modal-overlay" id="responseModal">
-        <div class="modal">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-            <h2>Відповісти на проект</h2>
-            <form class="response-form" id="responseForm" onsubmit="handleResponse(event)">
-                <input type="text" placeholder="Ваше ім'я" required>
-                <input type="email" placeholder="Ваш email" required>
-                <textarea placeholder="Ваше повідомлення" required></textarea>
-                <button type="submit">Відправити</button>
-            </form>
-        </div>
-    </div>
-    <div class="modal-overlay" id="confirmationModal">
-        <div class="modal">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-            <h2>Підтвердіть дію</h2>
-            <p>Ви впевнені, що хочете продовжити?</p>
-            <div class="modal-buttons">
-                <button onclick="handleConfirm()">Так</button>
-                <button onclick="closeModal()">Ні</button>
-            </div>
-        </div>
-    </div>
-    <div class="modal-overlay" id="iterationModal">
-        <div class="modal">
-            <button class="modal-close">&times;</button>
-            <h2>Підтвердження ітерації</h2>
-            <p>Ви впевнені, що хочете продовжити ітерацію?</p>
-            <div class="modal-buttons">
-                <button onclick="confirmIteration()">Продовжити</button>
-                <button onclick="closeModal()">Скасувати</button>
-            </div>
-        </div>
-    </div>
-    <div class="modal-overlay">
-        <div class="modal">
-            <button class="modal-close">&times;</button>
-            <h2>Підтвердження</h2>
-            <p>Ви впевнені, що хочете продовжити ітерацію?</p>
-            <div class="modal-buttons">
-                <button onclick="confirmIteration()">Продовжити</button>
-                <button onclick="closeModal()">Скасувати</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Подключение скриптов -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script type="module" src="js/translations/uk.js"></script>
-    <script type="module" src="js/translations/en.js"></script>
-    <script type="module" src="js/main.js"></script>
 </body>
 </html>

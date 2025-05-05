@@ -1,4 +1,4 @@
-const translations = {
+export const translations = {
     nav: {
         home: 'Головна',
         advantages: 'Переваги',
