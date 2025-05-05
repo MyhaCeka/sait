@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маркетинг - професійні рішення для вашого бізнесу</title>
+    <meta name="description" content="Маркетингове агентство Каріни - ваш надійний партнер у просуванні бізнесу. Ефективна реклама, стратегічний маркетинг, збільшення продажів.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">
+                    <img src="images/logo.svg" alt="Каріна Маркетинг">
+                </a>
+
+                <!-- Главное меню -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="#" class="active" data-translate="nav.home">Головна</a></li>
+                        <li><a href="#advantages" data-translate="nav.advantages">Переваги</a></li>
+                        <li class="has-submenu">
+                            <a href="#services" data-translate="nav.services">Послуги</a>
+                            <ul class="submenu">
+                                <li><a href="#digital">Цифровий маркетинг</a></li>
+                                <li><a href="#branding">Брендинг</a></li>
+                                <li><a href="#analytics">Аналітика</a></li>
+                                <li><a href="#strategy">Стратегія</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#workflow" data-translate="nav.workflow">Як ми працюємо</a></li>
+                        <li><a href="#testimonials" data-translate="nav.testimonials">Відгуки</a></li>
+                        <li><a href="#contact" data-translate="nav.contacts">Контакти</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__right">
+                    <a href="tel:+380501234567" class="phone-link">+38 (050) 123-45-67</a>
+                </div>
+
+                <button class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    <span class="accent-text" data-translate="hero.title">Просувайте свій бізнес з нашою рекламною стратегією</span>
+                    <span class="main-text" data-translate="hero.subtitle">Інdivідуальні рішення для підвищення впізнаваності бренду та зростання продажів</span>
+                </h1>
+                <a href="#contact" class="btn btn-primary" data-translate="hero.cta">Обговорити проект</a>
+            </div>
+        </div>
+        
+        <!-- Заменяем паутинку на particles.js -->
+        <div id="particles-js"></div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse"><div class="wheel"></div></div>
+            <div class="arrows">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция преимуществ -->
+    <section id="advantages" class="advantages">
+        <div class="container">
+            <h2 class="section-title">Чому обирають нас</h2>
+            <div class="advantages__grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M5 18H3v-2h2v2zm0-4H3v-2h2v2zm0-4H3V8h2v2zm4 8H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-12-4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zM9 6H7V4h2v2zm4 0h-2V4h2v2zm4 0h-2V4h2v2z"/>
+                        </svg>
+                    </div>
+                    <h3>Комплексний підхід</h3>
+                    <p>Ми аналізуємо ринок, конкурентів та цільову аудиторію, щоб створити інdivідуальну стратегію для вашого бізнесу.</p>
+                    <div class="card-hover-effect"></div>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 2v2H8V2H6v2H5c-1.11 0-2 .89-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.11-.9-2-2-2h-1V2h-2zm3 8H5v10h14V10z"/>
+                        </svg>
+                    </div>
+                    <h3>Точні терміни</h3>
+                    <p>Ми цінуємо ваш час і строго дотримуємося встановлених термінів на всіх етапах роботи над проектом.</p>
+                    <div class="card-hover-effect"></div>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 13c-.29 0-.62 0-.97.05C16.19 13.89 17 15 17 16.5V19h6v-2.5c0-2.33-4.67-3.5-7-3.5zm-8 0c-2.33 0-7 1.17-7 3.5V19h15v-2.5c0-2.33-4.67-3.5-7-3.5zm0-2c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm8 0c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"/>
+                        </svg>
+                    </div>
+                    <h3>Досвідчена команда</h3>
+                    <p>Наша команда складається з професіоналів з багаторічним досвідом роботи у сфері маркетингу та реклами.</p>
+                    <div class="card-hover-effect"></div>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 4h18v2H3V4zm2 3h14v2H5V7zm-2 4h18v2H3v-2zm2 3h14v2H5v-2zm-2 4h18v2H3v-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Прозорість роботи</h3>
+                    <p>Ми надаємо регулярні звіти про виконану роботу та досягнуті результати на кожному етапі співпраці.</p>
+                    <div class="card-hover-effect"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция достижений -->
+    <section class="achievements">
+        <div class="achievements-bg"></div>
+        <div class="container">
+            <div class="achievements__grid">
+                <div class="achievement-item" data-count="1500">
+                    <div class="achievement-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 13c-.29 0-.62 0-.97.05C16.19 13.89 17 15 17 16.5V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                    </div>
+                    <div class="achievement-number">0</div>
+                    <h3>Задоволених клієнтів</h3>
+                </div>
+
+                <div class="achievement-item" data-count="980">
+                    <div class="achievement-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/>
+                        </svg>
+                    </div>
+                    <div class="achievement-number">0</div>
+                    <h3>Успішних проектів</h3>
+                </div>
+
+                <div class="achievement-item" data-count="50">
+                    <div class="achievement-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8m.5 3v5.25L17 14.92l-.75 1.23L11 13V7h1.5z"/>
+                        </svg>
+                    </div>
+                    <div class="achievement-number">0</div>
+                    <h3>Експертів у команді</h3>
+                </div>
+
+                <div class="achievement-item" data-count="10">
+                    <div class="achievement-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                        </svg>
+                    </div>
+                    <div class="achievement-number">0</div>
+                    <h3>Років досвіду на ринку</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция отзывов -->
+    <section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">Що кажуть наші клієнти</h2>
+        
+        <div class="testimonials-slider">
+            <!-- Первый отзыв -->
+            <div class="testimonial-item active">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        "Співпраця з командою Каріни перевершила всі наші очікування. Їхній професійний підхід та увага до деталей допомогли нам значно покращити нашу присутність в інтернеті."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="images/avatars/avatar1.svg" alt="Олена Петренко">
+                        </div>
+                        <div class="author-info">
+                            <h4>Олена Петренко</h4>
+                            <p>Директор, Beauty Studio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Второй отзыв -->
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        "Вражаючі результати! За три місяці співпраці наші продажі зросли на 40%. Команда завжди на зв'язку та готова допомогти з будь-якими питаннями."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="images/avatars/avatar2.svg" alt="Михайло Ковальчук">
+                        </div>
+                        <div class="author-info">
+                            <h4>Михайло Ковальчук</h4>
+                            <p>Власник, MK Store</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Третий отзыв -->
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        "Дякуємо за чудову роботу! Особливо вражає креативний підхід та індивідуальні рішення для кожного клієнта. Рекомендую всім, хто хоче розвивати свій бізнес."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="images/avatars/avatar3.svg" alt="Ірина Коваленко">
+                        </div>
+                        <div class="author-info">
+                            <h4>Ірина Коваленко</h4>
+                            <p>CEO, Design Pro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Четвертый отзыв -->
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        "Завдяки професійному підходу команди Каріни, ми змогли збільшити нашу клієнтську базу вдвічі за півроку. Відмінне розуміння наших потреб та швидка реакція на всі запити."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="images/avatars/avatar1.svg" alt="Андрій Мельник">
+                        </div>
+                        <div class="author-info">
+                            <h4>Андрій Мельник</h4>
+                            <p>Засновник, IT Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Пятый отзыв -->
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        "Інноваційний підхід та креативні рішення допомогли нашому бренду виділитися серед конкурентів. Особлива подяка за детальну аналітику та прозорість у роботі."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="images/avatars/avatar2.svg" alt="Марія Литвиненко">
+                        </div>
+                        <div class="author-info">
+                            <h4>Марія Литвиненко</h4>
+                            <p>Маркетинг директор, Fashion House</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Шестой отзыв -->
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <div class="testimonial-text">
+                        "Співпраця з агентством Каріни - це завжди позитивний досвід. За рік роботи наш інтернет-магазин показав зростання продажів на 75%. Рекомендую як надійного партнера для розвитку бізнесу."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="images/avatars/avatar3.svg" alt="Олег Василенко">
+                        </div>
+                        <div class="author-info">
+                            <h4>Олег Василенко</h4>
+                            <p>Власник, E-commerce Plus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Навигация слайдера -->
+            <div class="testimonials-nav">
+                <button class="nav-prev">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6л-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                
+                <div class="testimonials-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                
+                <button class="nav-next">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M10.59 6L12 7.41 16.17 12 12 16.59 10.59 18l6-6z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Секция партнеров -->
+    <section id="partners" class="partners">
+    <div class="container">
+        <h2 class="section-title">Наші партнери</h2>
+        <p class="partners-subtitle">Компанії, яким ми допомогли розвинути бізнес та збільшити аудиторію</p>
+        
+        <div class="partners-categories">
+            <div class="partner-category active">Всі</div>
+            <div class="partner-category">Магазини одягу</div>
+            <div class="partner-category">Магазини взуття</div>
+            <div class="partner-category">ІТ та крипто курси</div>
+        </div>
+        
+        <div class="partners-grid">
+            <!-- Магазини одягу -->
+            <div class="partner-card" data-category="Магазини одягу">
+                <div class="partner-logo">
+                    <img src="images/projects/partner1.svg" alt="Fashion Store">
+                </div>
+                <div class="partner-content">
+                    <span class="partner-category">Магазини одягу</span>
+                    <h3>Fashion Store</h3>
+                    <p>Модний бренд одягу з власною лінійкою продукції</p>
+                    <div class="partner-results">
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Зростання продажів на 35%
+                        </div>
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Збільшення трафіку на 42%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="partner-card" data-category="Магазини одягу">
+                <div class="partner-logo">
+                    <img src="images/projects/partner2.svg" alt="Style Hub">
+                </div>
+                <div class="partner-content">
+                    <span class="partner-category">Магазини одягу</span>
+                    <h3>Style Hub</h3>
+                    <p>Мережа магазинів стильного одягу преміум класу</p>
+                    <div class="partner-results">
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Збільшення відвідуваності на 40%
+                        </div>
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Зростання впізнаваності бренду на 28%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Магазини взуття -->
+            <div class="partner-card" data-category="Магазини взуття">
+                <div class="partner-logo">
+                    <img src="images/projects/partner3.svg" alt="Shoe Expert">
+                </div>
+                <div class="partner-content">
+                    <span class="partner-category">Магазини взуття</span>
+                    <h3>Shoe Expert</h3>
+                    <p>Магазин якісного взуття для всієї родини</p>
+                    <div class="partner-results">
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Збільшення конверсії на 25%
+                        </div>
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Поліпшення користувацького досвіду на 30%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="partner-card" data-category="Магазини взуття">
+                <div class="partner-logo">
+                    <img src="images/projects/partner4.svg" alt="Step Forward">
+                </div>
+                <div class="partner-content">
+                    <span class="partner-category">Магазини взуття</span>
+                    <h3>Step Forward</h3>
+                    <p>Бутик спортивного та повсякденного взуття</p>
+                    <div class="partner-results">
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Зростання онлайн-продажів в 2 рази
+                        </div>
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Зниження вартості залучення клієнта на 18%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ІТ та крипто курси -->
+            <div class="partner-card" data-category="ІТ та крипто курси">
+                <div class="partner-logo">
+                    <img src="images/projects/partner5.svg" alt="Tech Academy">
+                </div>
+                <div class="partner-content">
+                    <span class="partner-category">ІТ курси</span>
+                    <h3>Tech Academy</h3>
+                    <p>Сучасна платформа онлайн-навчання у сфері IT</p>
+                    <div class="partner-results">
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Розширення аудиторії на 50%
+                        </div>
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Збільшення записів на курси на 38%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="partner-card" data-category="ІТ та крипто курси">
+                <div class="partner-logo">
+                    <img src="images/projects/partner5.svg" alt="Crypto School">
+                </div>
+                <div class="partner-content">
+                    <span class="partner-category">Крипто курси</span>
+                    <h3>Crypto School</h3>
+                    <p>Освітня платформа з криптовалют та блокчейну</p>
+                    <div class="partner-results">
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Підвищення впізнаваності бренду на 65%
+                        </div>
+                        <div class="partner-result-item">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5л-4-4 1.41-1.41L11 13.67л6.59-6.58L19 8.5л-8 8z"/>
+                            </svg>
+                            Зростання кількості студентів на 45%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Секция Вакансии -->
+<section id="vacancies" class="vacancies">
+    <div class="container">
+        <h2 class="section-title">Відкриті вакансії</h2>
+        <p class="vacancies-subtitle">Приєднуйтесь до нашої команди професіоналів</p>
+        
+        <div class="vacancies-grid">
+            <div class="vacancy-card">
+                <h3>Менеджер в чат-підтримку</h3>
+                <div class="vacancy-content">
+                    <div class="vacancy-details">
+                        <h4>Обов'язки:</h4>
+                        <ul>
+                            <li>Надання інформації про бренд, товар або послугу</li>
+                            <li>Обробка вхідних повідомлень</li>
+                            <li>Відповіді на запитання клієнтів</li>
+                            <li>Допомога у вирішенні проблем (якщо такі є)</li>
+                        </ul>
+                        
+                        <h4>Умови:</h4>
+                        <ul>
+                            <li>Графік роботи: Пн-Пт 10:00-18:00 (не віддалено)</li>
+                            <li>Ставка 26000 грн + бонусна система</li>
+                        </ul>
+                    </div>
+                    <div class="vacancy-apply">
+                        <button class="btn btn-primary vacancy-btn">Відгукнутися</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="vacancy-card">
+                <h3>Менеджер з персоналу</h3>
+                <div class="vacancy-content">
+                    <div class="vacancy-details">
+                        <h4>Обов'язки:</h4>
+                        <ul>
+                            <li>Пошук кандидатів за тими джерелами, які надає компанія</li>
+                            <li>Запрошення кандидатів на співбесіду</li>
+                        </ul>
+                        
+                        <h4>Умови:</h4>
+                        <ul>
+                            <li>Графік роботи: Пн-Пт 9:30-18:00 (не віддалено)</li>
+                            <li>Ставка 20000 грн + бонусна система</li>
+                        </ul>
+                    </div>
+                    <div class="vacancy-apply">
+                        <button class="btn btn-primary vacancy-btn">Відгукнутися</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="vacancy-contact-info">
+            <h4>Контакти відділ кадрів:</h4>
+            <div class="vacancy-contacts">
+                <div class="contact-phone">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38л2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02л-2.2 2.2z"/>
+                    </svg>
+                    <a href="tel:+380932709130">+38 (093) 270-91-30</a>
+                </div>
+                <div class="contact-phone">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38л2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02л-2.2 2.2z"/>
+                    </svg>
+                    <a href="tel:+380933447684">+38 (093) 344-76-84</a>
+                </div>
+            </div>
+            <p class="vacancy-note">Будь ласка, вказуйте в темі повідомлення назву вакансії, на яку ви відгукуєтесь</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Секция услуг -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Наші послуги</h2>
+            <div class="services__grid">
+                <div id="digital" class="service-card">
+                    <div class="service-card__content">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16.36 14C16.44 13.34 16.5 12.68 16.5 12C16.5 11.32 16.44 10.66 16.36 10H19.74C19.9 10.64 20 11.31 20 12C20 12.69 19.9 13.36 19.74 14M14.59 19.56C15.19 18.45 15.65 17.25 15.97 16H18.92C17.96 17.65 16.43 18.93 14.59 19.56M14.34 14H9.66C9.56 13.34 9.5 12.68 9.5 12C9.5 11.32 9.56 10.65 9.66 10H14.34C14.43 10.65 14.5 11.32 14.5 12C14.5 12.68 14.43 13.34 14.34 14M12 19.96C11.17 18.76 10.5 17.43 10.09 16H13.91C13.5 17.43 12.83 18.76 12 19.96M8 8H5.08C6.03 6.34 7.57 5.06 9.4 4.44C8.8 5.55 8.35 6.75 8 8M5.08 16H8C8.35 17.25 8.8 18.45 9.4 19.56C7.57 18.93 6.03 17.65 5.08 16M4.26 14C4.1 13.36 4 12.69 4 12C4 11.31 4.1 10.64 4.26 10H7.64C7.56 10.66 7.5 11.32 7.5 12C7.5 12.68 7.56 13.34 7.64 14M12 4.03C12.83 5.23 13.5 6.57 13.91 8H10.09C10.5 6.57 11.17 5.23 12 4.03M18.92 8H15.97C15.65 6.75 15.19 5.55 14.59 4.44C16.43 5.07 17.96 6.34 18.92 8M12 2C6.47 2 2 6.5 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2Z"></path>
+                            </svg>
+                        </div>
+                        <h3>Цифровий маркетинг</h3>
+                        <p>Комплексне просування вашого бізнесу в інтернеті: SEO, контекстна реклама, SMM, email-маркетинг.</p>
+                    </div>
+                </div>
+                
+                <div id="branding" class="service-card">
+                    <div class="service-card__content">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 3L1 9л11 6 11-6-11-6zm0 13.92л-6.5-4.45L1 14.9V19л11 6 11-6v-4.1л-4.5-2.45L12 16.92"></path>
+                            </svg>
+                        </div>
+                        <h3>Брендинг</h3>
+                        <p>Розробка фірмового стилю, логотипу, брендбуку та інших елементів візуальної ідентифікації бренду.</p>
+                    </div>
+                </div>
+                
+                <div id="analytics" class="service-card">
+                    <div class="service-card__content">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5c0-1.11-.9-2-2-2zm-6 14h-2v-7h2v7zm-4 0H7v-3h2v3zm8 0h-2v-4h2v4z"/>
+                            </svg>
+                        </div>
+                        <h3>Аналітика</h3>
+                        <p>Аналіз даних, моніторинг конкурентів, дослідження ринку та побудова ефективних бізнес-моделей.</p>
+                    </div>
+                </div>
+                
+                <div id="strategy" class="service-card">
+                    <div class="service-card__content">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 12h1.5v2.82л2.44 1.41-.75 1.3L14 15.69V12zm-4 0h2v3H8v-3zm4-10h2v3h-2V2zM8 2h2v3H8V2zm4 20a10 10 0 0 1-10-10 10 10 0 0 1 10-10 10 10 0 0 1 10 10 10 10 0 0 1-10 10z"/>
+                            </svg>
+                        </div>
+                        <h3>Стратегія</h3>
+                        <p>Розробка маркетингової стратегії, побудова ефективної воронки продажів, збільшення конверсії.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция процесса работы -->
+    <section id="workflow" class="workflow">
+        <div class="container">
+            <h2 class="section-title">Як ми працюємо</h2>
+            <div class="workflow__steps">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Аналіз та дослідження</h3>
+                        <p>Проводимо детальний аналіз вашого бізнесу, досліджуємо ринок, конкурентів та цільову аудиторію для формування повної картини.</p>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Розробка стратегії</h3>
+                        <p>На основі отриманих даних розробляємо інdivідуальну маркетингову стратегію, враховуючи особливості вашого бізнесу.</p>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Реалізація</h3>
+                        <p>Наша команда професіоналів послідовно реалізує всі етапи розробленої стратегії з урахуванням встановлених термінів.</p>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Аналіз результатів</h3>
+                        <p>Регулярно надаємо звіти про виконану роботу, аналізуємо ефективність та за необхідності коригуємо стратегію.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="workflow-decoration">
+                <div class="line-path"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция отзывов -->
+
+    <!-- Контактная форма -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Зв'яжіться з нами</h2>
+            <p class="contact-description">Залиште заявку, і наші спеціалісти зв'яжуться з вами найближчим часом для обговорення вашого проекту</p>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38л2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02л-2.2 2.2z"/>
+                            </svg>
+                            <a href="tel:+380501234567">+38 (050) 123-45-67</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M20 8л-8 5-8-5v-2л8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-1.11-.9-2-2-2z"/>
+                            </svg>
+                            <a href="mailto:info@karina-marketing.com">info@karina-marketing.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/>
+                            </svg>
+                            <address>Київ, вул. Хрещатик, 10, офіс 215</address>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.5632334774956!2d30.519946015724934!3d50.44725479547584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce56b2456d73%3A0xd062ae171b57e947!2z0YPQuy4g0KXRgNC10YnQsNGC0LjQuiwgMTAsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1650352935935!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder=" " required>
+                            <label for="name">Ваше ім'я</label>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder=" " required>
+                            <label for="phone">Ваш телефон</label>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label for="email">Ваш e-mail</label>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" placeholder=" ">
+                            <label for="company">Назва компанії</label>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Відправити заявку
+                            <span class="btn-hover-effect"></span>
+                        </button>
+                        <div class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer-left">
+                    <a href="#" class="footer-logo">
+                        <img src="images/logo-white.svg" alt="Каріна Маркетинг">
+                    </a>
+                    <p class="copyright">© 2025 Каріна Маркетинг. Всі права захищені.</p>
+                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#">Головна</a></li>
+                        <li><a href="#advantages">Переваги</a></li>
+                        <li><a href="#services">Послуги</a></li>
+                        <li><a href="#workflow">Як ми працюємо</a></li>
+                        <li><a href="#testimonials">Відгуки</a></li>
+                        <li><a href="#contact">Контакти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для отклика на вакансию -->
+    <div class="vacancy-modal" id="vacancyModal">
+        <div class="vacancy-modal-content">
+            <button class="vacancy-modal-close" id="modalClose">&times;</button>
+            <h2 class="vacancy-modal-title">Відгукнутися на вакансію</h2>
+            <form class="vacancy-form" id="vacancyForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Ваше ім'я</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder=" " required>
+                    <label for="phone">Телефон</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                    <label for="message">Супровідний лист</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="modal-title">Дякуємо за заявку!</h2>
+            <p class="modal-description">Ми зв'яжемося з вами найближчим часом для обговорення деталей.</p>
+            <button class="btn btn-primary">
+                Повернутися на сайт
+                <span class="btn-hover-effect"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для отклика -->
+    <div class="modal-overlay" id="responseModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2>Відповісти на проект</h2>
+            <form class="response-form" id="responseForm" onsubmit="handleResponse(event)">
+                <input type="text" placeholder="Ваше ім'я" required>
+                <input type="email" placeholder="Ваш email" required>
+                <textarea placeholder="Ваше повідомлення" required></textarea>
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal-overlay" id="confirmationModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2>Підтвердіть дію</h2>
+            <p>Ви впевнені, що хочете продовжити?</p>
+            <div class="modal-buttons">
+                <button onclick="handleConfirm()">Так</button>
+                <button onclick="closeModal()">Ні</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="iterationModal">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <h2>Підтвердження ітерації</h2>
+            <p>Ви впевнені, що хочете продовжити ітерацію?</p>
+            <div class="modal-buttons">
+                <button onclick="confirmIteration()">Продовжити</button>
+                <button onclick="closeModal()">Скасувати</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <h2>Підтвердження</h2>
+            <p>Ви впевнені, що хочете продовжити ітерацію?</p>
+            <div class="modal-buttons">
+                <button onclick="confirmIteration()">Продовжити</button>
+                <button onclick="closeModal()">Скасувати</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script type="module" src="js/translations/uk.js"></script>
+    <script type="module" src="js/translations/en.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
